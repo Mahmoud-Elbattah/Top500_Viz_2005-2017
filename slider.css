@@ -82,6 +82,7 @@
   transform: translate(-50%, -50%);
   transform: box-shadow ease-out .2s;
   outline: none;
+  cursor:pointer;
 }
 .ui-slider .ui-slider-handle:focus {
   box-shadow: 0 0 2px 2px #5EB1F8;
