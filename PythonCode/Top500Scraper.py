@@ -13,7 +13,7 @@ def getLocInfo(url):
     return country
 callsCount = 0
 def getCoordinates(country):
-    gmaps = googlemaps.Client(key='AIzaSyCbr_UdOaKxPFFoTsQUT9Sh8gRKayuaYYc')
+    gmaps = googlemaps.Client(key='Your API Key')
     geocode_result = gmaps.geocode(country)
     lat = str(geocode_result[0]['geometry']['location']['lat']).strip()
     lng = str(geocode_result[0]['geometry']['location']['lng']).strip()
