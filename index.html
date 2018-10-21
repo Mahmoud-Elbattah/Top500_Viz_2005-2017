@@ -5,8 +5,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
  <!-- Google Maps API-->
- <script defer="defer" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>         
-<link rel="stylesheet" href="slider.css">
+ <script defer="defer" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCim_RVAmtB-ddfUMci60i6MaEjqXPzRGE"></script>         
+<link rel="stylesheet" href="css/slider.css">
+<link rel="stylesheet" href="css/modal.css">
 <style>
 #pageTitle
 {
@@ -198,9 +199,54 @@
         });  
     }
     </script>
+
+<!--Script for the about modal box -->
+ <script type="text/javascript">
+       $(window).load(function () {
+           $(".trigger_popup_fricc").click(function () {
+               $('.hover_bkgr_fricc').show();
+           });
+           $('.hover_bkgr_fricc').click(function () {
+               $('.hover_bkgr_fricc').hide();
+           });
+           $('.popupCloseButton').click(function () {
+               $('.hover_bkgr_fricc').hide();
+           });
+       });
+        </script>
     </head>
 <body>
                 <div>
+                    <!--About Modal Box-->
+                    <div class="hover_bkgr_fricc">
+                        <span class="helper"></span>
+                        <div>
+                            <div class="popupCloseButton">X</div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Developed by <a href="https://www.researchgate.net/profile/Mahmoud_Elbattah2" style="color:#00e;text-decoration:underline">Mahmoud Elbattah </a><br />
+                                        mahmoud.elbattah@nuigalway.ie
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a style="color:#00e;text-decoration:underline" href="https://summerofhpc.prace-ri.eu/an-interactive-visualisation-to-explore-the-top500-list/"> Original Blogpost</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a style="color:#00e;text-decoration:underline" href="https://github.com/Mahmoud-Elbattah/BubbleViz-Top500">Code on GitHub</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="divAbout" style="position:absolute;right:1%;top:1%">
+                        <a href="#" class="trigger_popup_fricc">
+                            <img title="about" alt="About" src="info.png" style="width:25px;height:25px" />
+                        </a>
+                    </div>
                     <div>
                     <span id="pageTitle">How the World's Centre for Supercomputing Shifted in 13 Years?</span>
 
